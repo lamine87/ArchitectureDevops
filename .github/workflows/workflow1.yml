@@ -15,3 +15,12 @@ jobs:
     - name: Afficher valeur du job 1
       run: |
             echo "La valeur de la variable est ${{ vars.MYVAR1 }}"
+
+  jobs2 :
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      if: failure()
+    - name: Display
+      run: echo 'Le job precedent a echoue'         
