@@ -1,0 +1,17 @@
+name : Tag Workflow
+
+on :
+  push:
+    tags:
+      - 'v*'
+
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Afficher valeur du job 1
+      run: |
+            echo "La valeur de la variable est ${{ vars.MYVAR1 }}"
