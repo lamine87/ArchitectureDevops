@@ -5,7 +5,7 @@ on :
     tags:
       - 'v*'
 env:
- MYVAR: ${{vars.MYVAR1}}  
+ MYVAR1: ${{vars.MYVAR1}}  
 
 jobs:
   job1:
@@ -14,7 +14,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Afficher valeur du job1
-      run: |
+    run: |
             echo "La valeur de la variable est ${{ vars.MYVAR1 }}"
 
   jobs2 :
