@@ -4,7 +4,8 @@ on :
   push:
     tags:
       - 'v*'
-
+env:
+ MYVAR: ${{vars.MYVAR1}}  
 
 jobs:
   job1:
