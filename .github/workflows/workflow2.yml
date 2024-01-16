@@ -16,7 +16,17 @@ jobs:
     - name: Print test
       run: |
         echo "Job1 Test"
+  deploy:
+        runs-on: ubuntu-latest
 
+        if: (vars.A > 0) && (vars.B > 0)
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Executer un script si la condition remplie
+              run: |
+                echo "La valeur de la variable a est : ${{ vars.A }}"
+                echo "La valeur de la variable b est : ${{ vars.B }}"  
 
   jobs2 :
     runs-on: ubuntu-latest
@@ -37,16 +47,6 @@ jobs:
       run: python script.py
 
 
-  deploy:
-    runs-on: ubuntu-latest
 
-    if: (vars.A > 0) && (vars.B > 0)
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Executer un script si la condition remplie
-        run: |
-            echo "La valeur de la variable a est : ${{ vars.A }}"
-            echo "La valeur de la variable b est : ${{ vars.B }}" 
 
    
