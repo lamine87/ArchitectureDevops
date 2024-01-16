@@ -1,5 +1,5 @@
 def main():
-    print("Affiche " + a*b)
+    print("Affiche ")
 
 if __name__ == "__main__":
     main()
