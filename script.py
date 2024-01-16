@@ -1,5 +1,3 @@
-a=12
-b=123
 def main():
     print("Affiche " + a*b)
 
