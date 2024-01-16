@@ -1,7 +1,8 @@
 import os
 
 def main():
-    print("Affiche A * B :" (os.environ["A"])+ (os.environ["B"]))
+    valeurAB = float(os.environ["A"])*float(os.environ["B"])
+    print("Affiche A * B : " + valeurAB)
      
 
 if __name__ == "__main__":
