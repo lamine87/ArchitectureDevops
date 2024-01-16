@@ -47,7 +47,6 @@ jobs:
       run: python app.py
 
 
-            # echo "La valeur de la variable a * b est : ${{ vars.A* vars.B }}"
-            # echo "La valeur de la variable a + b est : ${{ vars.A + vars.B }}"
+       
 
    
