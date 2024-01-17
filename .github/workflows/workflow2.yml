@@ -2,7 +2,9 @@ name: Manual Workflow
 
 on: 
   workflow_dispatch:
-    
+env:
+  MYVAR1: ${{vars.A}}  
+  MYVAR: ${{vars.B}}      
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -19,7 +21,7 @@ jobs:
   deploy:
         runs-on: ubuntu-latest
 
-        if: (vars.A > 0) && (vars.B > 0)
+        if: ('MYVAR1' > 0) && ('MYVAR' > 0)
 
         steps:
             - uses: actions/checkout@v2
