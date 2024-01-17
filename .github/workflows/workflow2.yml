@@ -3,8 +3,8 @@ name: Manual Workflow
 on: 
   workflow_dispatch:
 env:
-  MYVAR1: ${{vars.A}}  
-  MYVAR: ${{vars.B}}      
+  a: ${{vars.A}}  
+  b: ${{vars.B}}      
 jobs:
   job1:
     runs-on: ubuntu-latest
