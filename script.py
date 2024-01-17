@@ -9,7 +9,7 @@ def main():
     print(a)
     print(b)
     print(ab)
-    print("Affiche A * B : " + str(ab))
+    print("Affichage de A * B = " + str(ab))
     
     print(f'log(ab) = {np.log(ab)}')
     print(f'log(a) + log(b) = {np.log(a) + np.log(b)}')
