@@ -22,6 +22,7 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-      if: failure()
+    #   if: failure()
+      if: always()
     - name: Display
       run: echo 'Le job precedent a echoue'         
